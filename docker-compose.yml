@@ -1,0 +1,11 @@
+version: '3.8'
+
+services :
+  DiceGame:
+    image: dicegame
+    container_name: dice-game
+    build:
+      context: ../DiceGame
+      dockerfile: dockerfile
+    ports:
+      - "8080:8080"
