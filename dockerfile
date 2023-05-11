@@ -14,7 +14,7 @@ COPY gradle ./gradle
 COPY src ./src
 
 # Exécutez la construction Gradle pour télécharger les dépendances et compiler l'application
-RUN ./gradlew bootJar -x test
+RUN ./gradlew build --no-daemon
 
 # Exposez le port sur lequel l'application Spring Boot écoute (le cas échéant)
 EXPOSE 8080

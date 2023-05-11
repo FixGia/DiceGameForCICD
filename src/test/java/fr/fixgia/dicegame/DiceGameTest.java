@@ -16,12 +16,4 @@ public class DiceGameTest {
         diceGame.DropFiveDice();
         assertEquals(5, diceGame.DropFiveDice().size());
     }
-
-    @Test
-    @DisplayName("Il y a 7 dés")
-    void test7Dices(){
-        diceGame.DropFiveDice();
-        assertEquals(7, diceGame.DropFiveDice().size());
-    }
-
 }
