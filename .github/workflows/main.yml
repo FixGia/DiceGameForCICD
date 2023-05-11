@@ -1,0 +1,13 @@
+#Trigger quand je push sur la branche "main"
+on: 
+  push:
+    branches: main
+ 
+ 
+jobs: 
+  demo: 
+    name: demo-ci
+    runs-on: ubuntu-latest
+    steps: 
+      - name: affichage
+        run: echo "Hello World"
