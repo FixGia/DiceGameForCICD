@@ -38,5 +38,5 @@ jobs:
           context: .
           file: ./dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/demo-alg-ci:${{github.ref_name}}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/DiceGameForCICD:${{github.ref_name}}
 
