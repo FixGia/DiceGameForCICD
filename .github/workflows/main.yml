@@ -1,0 +1,22 @@
+#Trigger quand je push sur la branche "main"
+on: 
+  push:
+    branches: main
+ 
+ 
+jobs: 
+  demo: 
+    name: demo-ci
+    runs-on: ubuntu-latest
+    steps: 
+      - name: affichage
+        run: echo "Hello World"
+      - name: Récupération du code
+        uses: actions/checkout@v3
+      - name: setup java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: 17
+      - run: ./gradlew test
+      
